@@ -1,0 +1,16 @@
+{
+    "electricity": {
+        "index": ~teleinfo(0,4)~,
+        "papp": ~teleinfo(0,27)~
+    },
+    "gas": {
+        "index": ~counter(0)~,
+        "day_index": ~cday(0)~,
+        "current_conso": ~meter(2)~
+    },
+    "water": {
+        "index": ~counter(1)~,
+        "day_index": ~cday(1)~,
+        "current_conso": ~meter(3)~
+    }
+}
