@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+	<script type="text/javascript">
+function redirect_navigateur()
+{
+
+// Detection iPhone
+	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/android/i)) ) 
+	{
+		if (document.cookie.indexOf("iphone_redirect=false") == -1)
+			window.location = "index1.htm";
+	}
+    else window.location = "index1.htm";	
+}
+
+//-->
+	</script>
+
+</head>
+<body onLoad="redirect_navigateur();">
+</body>
+</html>

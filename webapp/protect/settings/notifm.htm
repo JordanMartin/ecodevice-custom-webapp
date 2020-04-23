@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title>ECO DEVICES CONFIGURATION</title>
+	<script src="../../js/mchp.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<div id="header">
+			<div id="logo"> 
+				<a href="../../index1.htm"><img src="../../images/logo.png" alt="Eco Devices">
+				<h4>Suivi consommation</h4>
+			</div>
+			
+			<div id="menu">
+				<a href="../../index.htm"><div class="menu_first">ACCUEIL</div></a>
+				<a href="config.htm"><div class="menu_element">RESEAUX</div></a>
+				<a href="../../dyndns/index.htm"><div class="menu_element">DYNDNS</div></a>
+				<a href="system.htm"><div class="menu_element">SYSTEME</div></a>
+				<a href="notifm.htm"><div class="menu_last">M2M</div></a>
+			</div>
+
+			<div id="bloc_date">
+	    		<span id="h">~time0~</span>
+	    		<br>
+	    		<span id="date"></span>
+    		</div>
+		</div>
+
+		<div class="container1">
+			<h1 style="margin-top:40px;" >Communication machine (M2M)</h1>
+			<div class="blocE">
+				<center>
+				<h2>Permet l'envoi de commande M2M par le protocole TCP</h2>
+				<FORM NAME="serverport" action="notifm.htm">
+					<P>Port TCP: <INPUT TYPE="text" NAME="serverport" VALUE="~tcpport~" SIZE="8" MAXLENGTH="5"/><INPUT TYPE="submit" VALUE="Sauver"/></P>
+				</FORM>
+				</center>
+			</div>
+			<h1 style="margin-top:40px;" >Notifications globales</h1>
+			<div class="blocE">
+				<center>
+				<h2>Envoi p&eacute;riodique des donn&eacute;es vers un serveur distant</h2>
+				<form method="post" action="notifm.htm" name="notifm">	
+					<table>
+						<input type="hidden" name="num" value="31"/>
+						<tr><td>Serveur /IP</td><td><input type="text"   maxlength="28" name="serv" style="width:200px;margin-left:5px;" id="serv" value ="~pdata(31,30)~"/>
+							<span style="padding-left:15px;">Port:</span>   
+							<input type="text"  maxlength="5" name="port" style="width:40px;"  value ="~pdata(31,31)~"/>
+							<span style="padding-left:15px;">Login:</span>
+							<input type="text"  maxlength="32" name="pass" style="width:200px;"  value ="~pdata(31,35)~"/>
+							<span style="padding-left:25px;">Intervalle de temps:</span>   
+							<input type="text"  maxlength="5" name="time" style="width:60px;margin-left:5px;"  value ="~pdata(31,33)~"/>  
+							<td>
+						</tr>
+						<tr>
+							<td>URL:</td>
+							<td>                             
+							<input type="text"  maxlength="128" name="url" style="width:700px;margin-left:5px;"  value ="~pdata(31,32)~"/>            
+							<input type="submit" class="sl" style="margin-left:20px;" value="Sauver"/> <td>
+						</tr>
+					</table>                            
+				</form>
+				<h2>Les donn&eacute;es sont envoy&eacute;es toutes les (x) secondes.</h2>
+				</center>
+			</div>
+		</div>	
+	
+		<div id="footer">	
+			Copyright 2013<img class="fimg"src="../../images/footer.png">  GCE Electronics France  
+		</div>					
+	</div>
+
+	<script type="text/javascript">
+<!--
+function updateStatus(xmlData)
+{
+	// update date
+	var dateJour = getXMLValue(xmlData, 'date');
+	document.getElementById('date').innerHTML = changementDate(dateJour);
+
+	// Update time
+	document.getElementById('h').innerHTML = getXMLValue(xmlData, 'time0');
+}
+setTimeout("newAJAXCommand('../../status.xml', updateStatus, true)",500);
+//-->
+	</script>		
+
+</body>
+</html>

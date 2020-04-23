@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<title>ECO DEVICES DYNDNS</title>
+	<script src="../js/mchp.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<div id="header">
+			<div id="logo"> 
+				<img src="../images/logo.png" alt="Eco Devices">
+				<h4>Suivi consommation</h4>
+			</div>
+			
+			<div id="menu">
+				<a href="../index.htm"><div class="menu_first">ACCUEIL</div></a>
+				<a href="../protect/settings/config.htm"><div class="menu_element">RESEAUX</div></a>
+				<a href="index.htm"><div class="menu_element">DYNDNS</div></a>
+				<a href="../protect/settings/system.htm"><div class="menu_element">SYSTEME</div></a>
+				<a href="../protect/settings/notifm.htm"><div class="menu_last">M2M</div></a>
+			</div>
+    	
+    		<div id="bloc_date">
+	    		<span id="h">~time0~</span>
+	    		<br>
+	    		<span id="date"></span>
+    		</div>
+   
+		</div>
+  
+		<div class="fullpage">
+			 <div class="container">	
+				<div class="blocD">
+					<center>
+					<h1>INFORMATION DYNDNS</h1>
+					<span id="status">En attente de connection.</span>
+					</center> 
+				</div>
+			
+
+	
+
+				<div class="blocD" style="margin-top:10px;">
+					<center>
+					<h1>PARAMÊTRES DynDNS</h1>	
+					<form method="post" action="index.htm">
+						<center> 
+						<table  summary="dns table">
+							<tr> 
+								<td>DDNS Service:</td> 
+								<td>
+								<select name="service">
+								<option value="0" ~ddns_service(0)~>DynDNS (www.dyndns.com)</option>
+								<option value="1" ~ddns_service(1)~>No-IP (www.no-ip.com)</option>
+								<option value="2" ~ddns_service(2)~>DNS-O-Matic (www.dnsomatic.com)</option>
+								<option value="3" ~ddns_service(3)~>OVH (www.OVH.com)</option>
+								</select>
+								</td>
+							</tr>
+							<tr> 
+								<td>UserName:</td> 
+								<td>
+								<input type="text" name="user" maxlength="40" value="~ddns_user~"/>
+								</td>
+							</tr>
+							<tr> 
+								<td>Password:</td> 
+								<td>
+								<input type="text" name="pass" maxlength="24" value="~ddns_pass~"/>
+								</td>
+							</tr>
+							<tr> 
+								<td>Host:</td> 
+								<td>
+								<input type="text" name="host" maxlength="48" value="~ddns_host~" /></td>
+							</tr>
+						</table>
+						</center> 
+						<input type="submit" class="sl" value="Sauver"/>
+					</form>
+				</div>	
+			</div>
+		</div>	
+
+		<div id="footer">	
+			Copyright 2013<img class="fimg"src="../images/footer.png">  GCE Electronics France  
+		</div>	
+    	
+		<script type="text/javascript">
+<!--
+function updateStatus(xmlData)
+{
+	// update date
+	var dateJour = getXMLValue(xmlData, 'date');
+	document.getElementById('date').innerHTML = changementDate(dateJour);
+
+	// Update time
+	document.getElementById('h').innerHTML = getXMLValue(xmlData, 'time0');
+	
+	// Update dyndns status
+	switch (getXMLValue(xmlData, 'dnsstatus'))
+    {
+		case '0':
+			document.getElementById('status').innerHTML ="Connection au service réussie";
+		break;
+		 
+		case '1':
+			document.getElementById('status').innerHTML ="Votre adresse IP n'à pas changée";
+		break;
+		 
+	    case '2':
+			document.getElementById('status').innerHTML ="Le serveur distant est injoignable.";
+		break;	
+		 
+		case '3':
+			document.getElementById('status').innerHTML ="Le serveur distant n'a pas réussi à vous identifier.";
+		break;	 
+		 
+		case '4':
+			document.getElementById('status').innerHTML ="En attente de connection.";
+		break;	 
+		 		  
+		case '5':
+			document.getElementById('status').innerHTML ="Erreur de configuration. Veuillez vérifier vos paramètres.";
+		break;	 
+	}
+}
+setTimeout("newAJAXCommand('../status.xml', updateStatus, true)",500);
+//-->
+		</script>		
+	</div>
+
+</body>
+</html>

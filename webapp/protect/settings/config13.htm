@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title>ECO DEVICES CONFIGURATION</title>
+	<script src="../../js/mchp.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<div id="header">
+			<div id="logo"> 
+				<a href="../../index1.htm"><img src="../../images/logo.png" alt="Eco Devices">
+				<h4>Suivi consommation</h4>
+			</div>
+			
+			<div id="menu">
+				<a href="../../index.htm"><div class="menu_first">ACCUEIL</div></a>
+				<a href="config.htm"><div class="menu_element">RESEAUX</div></a>
+				<a href="../../dyndns/index.htm"><div class="menu_element">DYNDNS</div></a>
+				<a href="system.htm"><div class="menu_element">SYSTEME</div></a>
+				<a href="notifm.htm"><div class="menu_last">M2M</div></a>
+			</div>
+    	
+			<div id="bloc_date">
+	    		<span id="h">~time0~</span>
+	    		<br>
+	    		<span id="date"></span>
+    		</div>
+		</div>
+
+		<div class="fullpage">
+			<div class="container">				
+				<div class="blocA">
+					<form method="get" action="config13.htm" name="config13name">	
+						<center>
+						<h1>Designation de Compteur 2 (C2)</h1> 
+						<TABLE>
+							<tr> 
+								<input type="hidden" name="num" value="3" />
+								<td>Nom:</td> 
+								<td><input class="champs" type="text" name="name" value="~io_name(3)~"/></td> <td><input type="submit"  value="Sauver" /></td>
+							</tr>
+						</TABLE>
+						</center> 
+					</form>
+				</div>
+
+				<div class="blocB">
+					<center>
+					<form method="get" action="config13.htm" name="config13val">	
+						<h1>Assignation</h1>	
+						<h2>Assigner la valeur et le type de mesure</h2>		
+						<TABLE>
+							<tr> 
+								<input type="hidden" name="num" value="1" />
+								<td>Valeur:</td> 
+								<td><input class="champs" style="width:90px;" type="text" name="val" value="~cntdat(1,0)~"/></td>
+								<td style="padding-left:10px;">  Type:</td> 
+								<td>      
+								<select name="type">
+									<option value="1" ~cntdat(1,1)~>Eau</option>                            
+									<option value="2" ~cntdat(1,2)~>Gaz</option>                             
+									<option value="3" ~cntdat(1,3)~>Electricité</option>
+									<option value="4" ~cntdat(1,4)~>Fuel</option>
+								</select>
+								</td>
+								<td><input type="submit"  value="Sauver" /></td>
+							</tr>
+						</TABLE>
+						</center>
+					</form>
+				</div>
+
+				<div class="blocB">
+					<center>
+					<form method="get" action="config13.htm" name="config13pulse">	
+						<h1>Configuration</h1>	
+						<h2>Compte le nombre d'impulsion</h2>		
+						<TABLE>
+							<tr> 
+								<input type="hidden" name="num" value="1" />
+								<td>Nbr impulsion:</td> 
+								<td><input class="champs" style="width:40px;text-align:center;"  type="text" name="pulse" value="~cntdat(1,5)~"/></td>
+								<td style="padding-left:10px;">= Nbr unité:</td> 
+								<td><input class="champs" style="width:40px;text-align:center;"  type="text" name="unit" value="~cntdat(1,8)~"/></td>
+								<td style="padding-left:10px;"><input type="submit"  value="Sauver" /></td>
+							</tr>
+						</TABLE>
+						</center>
+					</form>
+				</div> 
+	   
+				<div class="blocB">
+					<center>
+					<form method="get" action="config13.htm" name="config13deb">	
+						<h1>Configuration Fuel</h1>	
+						<h2>Mesure le temps de fonctionnement de la chaudière</h2>		
+						<TABLE>
+							<tr> 
+								<input type="hidden" name="num" value="1" />
+								<td>Débit gicleur en L/h:</td> 
+								<td><input class="champs" style="width:40px;text-align:center;"  type="text" name="lph" value="~cntdat(1,6)~"/></td>
+								<td style="padding-left:10px;"><input type="submit"  value="Sauver" /></td>
+							</tr>
+						</TABLE>
+						</center>
+					</form>
+				</div>
+			</div>
+
+			<div class="blocC">
+				<center>
+				<form method="get" action="config13.htm" name="config13seuil">	
+					<h1>Alerte débit</h1>	
+					<h2>Définir les valeurs des seuils</h2>		
+					<TABLE>
+						<tr> 
+							<input type="hidden" name="ncnt" value="1" />
+							<td>Seuil Haut:</td> 
+							<td><input class="champs" type="text" name="seh" value="~seuil(1,2)~"/></td>
+						</tr>
+						<tr>
+							<td>Seuil Bas:</td> 
+							<td><input class="champs" type="text" name="sel" value="~seuil(1,3)~"/></td>
+						</tr>
+						<tr> 
+							<td><input type="submit"  value="Sauver" /></td>
+						</tr>
+					</TABLE>
+					</center>
+				</form>
+			</div> 
+			
+			<div class="blocC" style="margin-top:20px;">
+				<center>
+				<form method="get" action="config13.htm" name="config13cumul">	
+					<h1>Alerte cumul</h1>	
+					<h2>Définir la valeur de consommation à ne pas dépasser.</h2>		
+					<TABLE>
+						<tr> 
+							<input type="hidden" name="ncnt" value="1" />
+							<td>Valeur:</td> 
+							<td><input class="champs" type="text" name="sem" value="~seuil(1,4)~"/></td>
+							<td><input type="submit"  value="Sauver" /></td>
+						</tr>
+					</TABLE>
+				</form>
+				</center>
+			</div> 
+
+			<div   class="blocC" style="margin-top:20px;">
+				<center>
+				<form method="get" action="config13.htm" name="config13timer">	
+					<h1>Remise à zéro</h1>	
+					<h2>Reset du compteur à heure fixe</h2>	
+					<h2 style="padding-top:10px;">Entrez le chiffre 24 pour désactiver le service !</h2>		
+					<TABLE>
+						<tr> 
+							<input type="hidden" name="num" value="1" />
+							<td>Horaire de reset HH:MM</td> 
+							<td><input class="champs" style="width:40px;text-align:center;"  type="text" name="raztime" value="~cntdat(1,7)~"/></td>
+							<td><input type="submit"  value="Sauver" /></td>
+						</tr>
+					</TABLE>
+				</form>
+				</center>
+			</div> 
+		</div>
+
+		<div id="footer">	
+			Copyright 2013<img class="fimg"src="../../images/footer.png">  GCE Electronics France  
+		</div>			
+	</div>
+
+	<script type="text/javascript">
+<!--
+function updateStatus(xmlData)
+{	 
+	// update date
+	var dateJour = getXMLValue(xmlData, 'date');
+	document.getElementById('date').innerHTML = changementDate(dateJour);
+
+	// Update time
+	document.getElementById('h').innerHTML = getXMLValue(xmlData, 'time0');
+}
+setTimeout("newAJAXCommand('../../status.xml', updateStatus, true)",500);
+//-->
+	</script>		
+
+</body>
+</html>

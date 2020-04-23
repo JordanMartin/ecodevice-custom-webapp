@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<response>
+<!-- GCE ELectronics - XML - XDEVICES - ECO-DEVICES - Copyright 2013 -->
+
+<!-- APPUYEZ SUR LA TOUCHE F5 DE VOTRE CLAVIER POUR ACTUALISER -->
+
+<!--  TELEINFO 2  -->
+
+<T2_ADCO>~teleinfo(1,1)~</T2_ADCO>
+<T2_OPTARIF>~teleinfo(1,2)~</T2_OPTARIF>
+<T2_ISOUSC>~teleinfo(1,3)~</T2_ISOUSC>
+<T2_BASE>~teleinfo(1,4)~</T2_BASE>
+<T2_HCHC>~teleinfo(1,5)~</T2_HCHC>
+<T2_HCHP>~teleinfo(1,6)~</T2_HCHP>
+<T2_EJPHN>~teleinfo(1,7)~</T2_EJPHN>
+<T2_EJPHPM>~teleinfo(1,8)~</T2_EJPHPM>
+<T2_BBRHCJB>~teleinfo(1,9)~</T2_BBRHCJB>
+<T2_BBRHPJB>~teleinfo(1,10)~</T2_BBRHPJB>
+<T2_BBRHCJW>~teleinfo(1,11)~</T2_BBRHCJW>
+<T2_BBRHPJW>~teleinfo(1,12)~</T2_BBRHPJW>
+<T2_BBRHCJR>~teleinfo(1,13)~</T2_BBRHCJR>
+<T2_BBRHPJR>~teleinfo(1,14)~</T2_BBRHPJR>
+<T2_PEJP>~teleinfo(1,15)~</T2_PEJP>
+<T2_PTEC>~teleinfo(1,16)~</T2_PTEC>
+<T2_DEMAIN>~teleinfo(1,17)~</T2_DEMAIN>
+<T2_IINST>~teleinfo(1,18)~</T2_IINST>
+<T2_IINST1>~teleinfo(1,19)~</T2_IINST1>
+<T2_IINST2>~teleinfo(1,20)~</T2_IINST2>
+<T2_IINST3>~teleinfo(1,21)~</T2_IINST3>
+<T2_ADPS>~teleinfo(1,22)~</T2_ADPS>
+<T2_IMAX>~teleinfo(1,23)~</T2_IMAX>
+<T2_IMAX1>~teleinfo(1,24)~</T2_IMAX1>
+<T2_IMAX2>~teleinfo(1,25)~</T2_IMAX2>
+<T2_IMAX3>~teleinfo(1,26)~</T2_IMAX3>
+<T2_PPAP>~teleinfo(1,27)~</T2_PPAP>
+<T2_PAPP>~teleinfo(1,27)~</T2_PAPP>
+<T2_HHPHC>~teleinfo(1,28)~</T2_HHPHC>
+<T2_MOTDETAT>~teleinfo(1,29)~</T2_MOTDETAT>
+<T2_PPOT>~teleinfo(1,30)~</T2_PPOT>
+
+<!-- FIN TELEINFO 2 -->
+
+</response>
+

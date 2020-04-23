@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<title>ECO DEVICES EMAILS COMPTEUR 2</title>
+	<script src="../../js/mchp.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<div id="header">
+			<div id="logo"> 
+				<a href="../../index1.htm"><img src="../../images/logo.png" alt="Eco Devices">
+				<h4>Suivi consommation</h4>
+			</div>
+			
+			<div id="menu">
+				<a href="../../index.htm"><div class="menu_first">ACCUEIL</div></a>
+				<a href="config.htm"><div class="menu_element">RESEAUX</div></a>
+				<a href="../../dyndns/index.htm"><div class="menu_element">DYNDNS</div></a>
+				<a href="system.htm"><div class="menu_element">SYSTEME</div></a>
+				<a href="notifm.htm"><div class="menu_last">M2M</div></a>
+			</div>
+    	
+			<div id="bloc_date">
+	    		<span id="h">~time0~</span>
+	    		<br>
+	    		<span id="date"></span>
+    		</div>
+		</div>
+
+		<div class="container1">
+			<h1 style="margin-top:40px;" >Notification Email ~io_name(3)~</h1>
+			<a style="font-size:14px;" href="notif4P.htm">Retour aux notifications Push</a>
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife18">	
+					<table>
+						<input type="hidden" name="num" value="18"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(18,31)~"/> </td>
+						</tr>
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(18,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="00" >Pas d'envoi</option>                            
+								<option value="1" id="01">Envoi si > seuil Haut</option>                             
+								<option value="2" id="02">Envoi si < seuil Bas</option>
+								<option value="3" id="03">Envoi si compteur = 0</option>
+								<option value="4" id="04">Envoi si Alerte cumul</option>
+
+							</select>        
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/> </td>
+						</tr>
+					</table>
+				</form>
+				</center>
+			</div>		
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife19">	
+					<table>
+						<input type="hidden" name="num" value="19"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(19,31)~"/> </td>
+						</tr>
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(19,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="10" >Pas d'envoi</option>                            
+								<option value="1" id="11">Envoi si > seuil Haut</option>                             
+								<option value="2" id="12">Envoi si < seuil Bas</option>
+								<option value="3" id="13">Envoi si compteur = 0</option>
+								<option value="4" id="14">Envoi si Alerte cumul</option>
+							</select> 
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/> </td>
+						</tr>
+					</table>
+				</form>
+				</center>
+			</div>		
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife20">	
+					<table>
+						<input type="hidden" name="num" value="20"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(20,31)~"/> </td>
+						</tr>
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(14,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="20" >Pas d'envoi</option>                            
+								<option value="1" id="21">Envoi si > seuil Haut</option>                             
+								<option value="2" id="22">Envoi si < seuil Bas</option>
+								<option value="3" id="23">Envoi si compteur = 0</option>
+								<option value="4" id="24">Envoi si Alerte cumul</option>
+							</select>        
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/> </td>
+						</tr>
+					</table>
+				</form>
+				</center>
+			</div>		
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife21">	
+					<table>
+						<input type="hidden" name="num" value="21"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(21,31)~"/> </td>
+						</tr> 
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(21,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="30" >Pas d'envoi</option>                            
+								<option value="1" id="31">Envoi si > seuil Haut</option>                             
+								<option value="2" id="32">Envoi si < seuil Bas</option>
+								<option value="3" id="33">Envoi si compteur = 0</option>
+								<option value="4" id="34">Envoi si Alerte cumul</option>
+							</select>   	  
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/> </td>
+						</tr>
+					</table>
+				</form>
+				</select>
+			</div>	
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife22">	
+					<table>
+						<input type="hidden" name="num" value="22"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(22,31)~"/> </td>
+						</tr>
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(22,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="40" >Pas d'envoi</option>                            
+								<option value="1" id="41">Envoi si > seuil Haut</option>                             
+								<option value="2" id="42">Envoi si < seuil Bas</option>
+								<option value="3" id="43">Envoi si compteur = 0</option>
+								<option value="4" id="44">Envoi si Alerte cumul</option>
+							</select>
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/></td>
+						</tr>
+					</table>
+				</form>
+				</center>
+			</div>	
+			<div class="blocE">
+				<center>
+				<form method="post" action="notif4E.htm" name="notife23">	
+					<table>
+						<input type="hidden" name="num" value="23"/>
+						<tr>
+							<td>Destinataire:</td><td><input type="text"  maxlength="30" name="dest" style="width:300px;margin-left:5px;" id="dest" value ="~edata(23,31)~"/> </td>
+						</tr> 
+						<tr>
+							<td>Message:</td><td><input type="text"  maxlength="30" name="mess" style="width:300px;margin-left:5px;"  value ="~edata(23,32)~"/> 
+							<span style="padding-left:60px;">Action:</span>
+							<select name="ace">
+								<option value="0" id="50" >Pas d'envoi</option>                            
+								<option value="1" id="51">Envoi si > seuil Haut</option>                             
+								<option value="2" id="52">Envoi si < seuil Bas</option>
+								<option value="3" id="53">Envoi si compteur = 0</option>
+								<option value="4" id="54">Envoi si Alerte cumul</option>
+							</select>   
+							<input type="submit" class="sl" style="margin-left:120px;" value="Sauver"/></td>
+						</tr>
+					</table>
+				</form>
+			</div>	
+		</div>	
+  
+		<div id="footer">	
+			Copyright 2013<img class="fimg"src="../../images/footer.png">  GCE Electronics France  
+		</div>	
+	</div>
+
+	<script type="text/javascript">
+<!--
+var Selected0 = ~edata(18,0)~;
+var Selected1 = ~edata(19,0)~;
+var Selected2 = ~edata(20,0)~;
+var Selected3 = ~edata(21,0)~;
+var Selected4 = ~edata(22,0)~;
+var Selected5 = ~edata(23,0)~;
+
+
+document.getElementById('0'+Selected0).selected = true;
+document.getElementById('1'+Selected1).selected = true;
+document.getElementById('2'+Selected2).selected = true;
+document.getElementById('3'+Selected3).selected = true;
+document.getElementById('4'+Selected4).selected = true;
+document.getElementById('5'+Selected5).selected = true;
+function updateStatus(xmlData)
+{
+	// update date
+	var dateJour = getXMLValue(xmlData, 'date');
+	document.getElementById('date').innerHTML = changementDate(dateJour);
+
+	// Update time
+	document.getElementById('h').innerHTML = getXMLValue(xmlData, 'time0');
+}
+setTimeout("newAJAXCommand('../../status.xml', updateStatus, true)",500);
+//-->
+	</script>		
+
+</body>
+</html>
